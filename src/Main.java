@@ -32,6 +32,8 @@ public class Main {
 //            System.out.println(modelSpeedHdDto);
 //        }
 
+//        test
+
         List<ModelRamScreenDto>modelRamScreenDtos = LaptopService.INSTANCE.findModelRamScreenDtosByPrice(1000);
         for (ModelRamScreenDto modelRamScreenDto: modelRamScreenDtos){
             System.out.println(modelRamScreenDto);
