@@ -1,6 +1,9 @@
 import models.Laptop;
 import models.Product;
+import models.dto.ModelRamScreenDto;
+import models.dto.ModelSpeedHdDto;
 import services.LaptopService;
+import services.PcService;
 import services.ProductService;
 import services.impl.ProductServiceImpl;
 
@@ -20,8 +23,19 @@ public class Main {
 
         //printProducts();
 
-        printLaptops();
+        //printLaptops();
 
+
+
+//        List<ModelSpeedHdDto> modelSpeedHdDtos = PcService.INSTANCE.findModelSpeedHdDtosByPrice(500);
+//        for (ModelSpeedHdDto modelSpeedHdDto: modelSpeedHdDtos){
+//            System.out.println(modelSpeedHdDto);
+//        }
+
+        List<ModelRamScreenDto>modelRamScreenDtos = LaptopService.INSTANCE.findModelRamScreenDtosByPrice(1000);
+        for (ModelRamScreenDto modelRamScreenDto: modelRamScreenDtos){
+            System.out.println(modelRamScreenDto);
+        }
 
     }
 
